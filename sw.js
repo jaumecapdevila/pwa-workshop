@@ -2,6 +2,9 @@
   const CACHE_NAME = 'PWA-INTRO-V1'
   const CACHE_FILE_NAMES = [
     '/',
+    '/page1.html',
+    '/page2.html',
+    '/page3.html',
     '/images/meme0.jpg',
     '/images/meme1.jpeg',
     '/images/meme2.png',
