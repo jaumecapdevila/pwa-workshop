@@ -19,5 +19,16 @@
   self.addEventListener('fetch', event => {
     console.log(`Fetch: ${event.request.url}`)
     // Add the logic to grab cached assets when available
+    event.respondWith(
+      caches.match(event.request)
+        .then(function(response) {
+          // Cache hit - return response
+          if (response) {
+            return response;
+          }
+          return fetch(event.request);
+        }
+      )
+    );
   })
 })()
