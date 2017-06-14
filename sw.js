@@ -4,7 +4,7 @@
     '/',
     '/images/meme0.jpg',
     '/images/meme1.jpg',
-    '/images/meme2.jpg',
+    '/images/meme2.png',
     '/images/meme3.jpg',
     '/styles.css'
   ] 
