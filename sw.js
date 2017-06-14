@@ -1,10 +1,10 @@
 (function () {
   const CACHE_NAME = 'PWA-INTRO-V1'
   const CACHE_FILE_NAMES = [
-    '/images/meme0.jpg',
-    '/images/meme1.jpg',
-    '/images/meme2.jpg',
-    '/images/meme3.jpg',
+    './images/meme0.jpg',
+    './images/meme1.jpg',
+    './images/meme2.jpg',
+    './images/meme3.jpg',
     './styles.css'
   ] 
 
