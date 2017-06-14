@@ -16,19 +16,28 @@
   <div class="container">
     <div class="title">PWA</div>
     <div class="contentContainer">
-      <img alt="meme0" src="images/meme0.jpg" />
+      <img alt="meme0" src="images/meme0.jpg"/>
       <div class="nav">
-        <a href="pages/page1.html" />Page 1</a>
-        <a href="pages/page2.html" />Page 2</a>
-        <a href="pages/page3.html" />Page 3</a>
+        <a href="pages/page1.html"/>Page 1</a>
+        <a href="pages/page2.html"/>Page 2</a>
+        <a href="pages/page3.html"/>Page 3</a>
       </div>
     </div>
   </div>
 </body>
 
 <script>
-  // Register the Service Worker stored in "sw.js"
-
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/sw.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }).catch(function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
 </script>
 
 </html>
