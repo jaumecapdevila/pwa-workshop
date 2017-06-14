@@ -1,10 +1,19 @@
 (function () {
   const CACHE_NAME = 'PWA-INTRO-V1'
-  const CACHE_FILE_NAMES = [] // Add the assets you want to cache here
+  const CACHE_FILE_NAMES = [
+    '/images/*',
+    './styles.css'
+  ] 
 
   self.addEventListener('install', event => {
     console.log('Install')
-    // Now cache your assets
+    event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then(function(cache) {
+        console.log('Opened cache');
+        return cache.addAll(CACHE_FILE_NAMES);
+      })
+    );
   })
 
   self.addEventListener('fetch', event => {
